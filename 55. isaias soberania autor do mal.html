@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaías 45:7 e a Soberania de Deus — As Cinco Atribuições</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0d0a04;
+      --bg-card: #161108;
+      --bg-card-hover: #1e170b;
+      --border-gold: rgba(212, 175, 55, 0.28);
+      --border-gold-strong: rgba(212, 175, 55, 0.6);
+      --gold: #d4af37;
+      --gold-light: #f0d57c;
+      --text-main: #ede6d6;
+      --text-muted: #b8ad96;
+      --accent-shalom: #3a7d5c;
+      --accent-ra: #8f3d2e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      line-height: 1.72;
+      padding: 1.25rem 1rem 4rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+    }
+
+    header.hero {
+      text-align: center;
+      padding: 2.2rem 1.25rem 1.8rem;
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      background: radial-gradient(circle at top, #1f170a 0%, #0d0a04 80%);
+    }
+
+    .eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: clamp(1.55rem, 4.5vw, 2.25rem);
+      color: var(--gold-light);
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .verse-banner {
+      background: rgba(212, 175, 55, 0.06);
+      border-left: 3px solid var(--gold);
+      padding: 0.9rem 1.1rem;
+      text-align: left;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--text-main);
+    }
+
+    .verse-banner span {
+      display: block;
+      font-style: normal;
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      color: var(--gold);
+      margin-top: 0.35rem;
+    }
+
+    .controls-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-control {
+      background: var(--bg-card);
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      padding: 0.45rem 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-control:hover {
+      border-color: var(--border-gold-strong);
+      background: var(--bg-card-hover);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 1.4rem 1.35rem;
+    }
+
+    .card h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.28rem;
+      color: var(--gold-light);
+      margin-bottom: 0.85rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.16);
+      padding-bottom: 0.45rem;
+    }
+
+    .card p + p {
+      margin-top: 0.85rem;
+    }
+
+    .comparison-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 0.9rem;
+    }
+
+    .pill-box {
+      padding: 1rem 1.1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-gold);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .pill-box.shalom {
+      border-left: 4px solid var(--accent-shalom);
+    }
+
+    .pill-box.ra {
+      border-left: 4px solid var(--accent-ra);
+    }
+
+    .pill-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--gold-light);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Acordeões das 5 Atribuições */
+    .accordion-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .accordion-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.25s ease;
+    }
+
+    .accordion-item.active {
+      border-color: var(--border-gold-strong);
+    }
+
+    .accordion-header {
+      width: 100%;
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      cursor: pointer;
+      gap: 1rem;
+    }
+
+    .accordion-header:hover {
+      background: var(--bg-card-hover);
+    }
+
+    .attr-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .attr-number {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      border: 1px solid var(--border-gold);
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .attr-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .attr-role {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .chevron {
+      font-size: 1.1rem;
+      color: var(--gold);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .accordion-item.active .chevron {
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 1.25rem;
+    }
+
+    .accordion-item.active .accordion-body {
+      padding: 0 1.25rem 1.35rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.14);
+    }
+
+    .accordion-body p {
+      margin-top: 0.9rem;
+    }
+
+    .scripture-box {
+      margin-top: 0.95rem;
+      padding: 0.85rem 1rem;
+      background: rgba(212, 175, 55, 0.05);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+    }
+
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    /* Simulador Interativo de Analogias */
+    .tabs-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin: 0.85rem 0 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .tabs-nav {
+        flex-direction: row;
+      }
+    }
+
+    .tab-btn {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-gold);
+      color: var(--text-muted);
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      padding: 0.65rem 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background: rgba(212, 175, 55, 0.14);
+      border-color: var(--gold);
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .tab-panel {
+      display: none;
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .tab-panel h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      color: var(--gold-light);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Seção Resumo Copiável */
+    .summary-box {
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px dashed var(--border-gold-strong);
+      border-radius: 8px;
+      padding: 1rem 1.15rem;
+      margin-top: 0.75rem;
+      font-size: 1.02rem;
+    }
+
+    .copy-feedback {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      color: var(--gold-light);
+      margin-left: 0.6rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .copy-feedback.visible {
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      padding-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="eyebrow">Teologia Bíblica &amp; Exegese</div>
+      <h1>Deus como Autor do Mal em Isaías 45:7</h1>
+      <p class="subtitle">
+        Uma síntese fundamentada na semântica do hebraico bíblico e nas cinco atribuições soberanas de Deus para distinguir parâmetro moral, juízo histórico e responsabilidade humana.
+      </p>
+      <div class="verse-banner">
+        “Eu formo a luz e crio as trevas; faço a paz e crio o mal; eu, o SENHOR, faço todas estas coisas.”
+        <span>Isaías 45:7</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>1. O Fundamento Textual e Semântico</h2>
+      <p>
+        Para compreender Isaías 45:7 sem atribuir perversidade moral a Deus, é indispensável observar duas distinções: na língua portuguesa, entre <strong>mal</strong> (substantivo, oposto a <em>bem</em> — adversidade, aperto, juízo) e <strong>mau</strong> (adjetivo, oposto a <em>bom</em> — caráter perverso); e no hebraico original, o contraste poético do versículo.
+      </p>
+      <div class="comparison-grid">
+        <div class="pill-box shalom">
+          <div class="pill-title">Shalom (שָׁלוֹם) — Paz e Ordem</div>
+          <p>Indica bem-estar, prosperidade, integridade, tranquilidade e harmonia estabelecida sob o governo de Deus.</p>
+        </div>
+        <div class="pill-box ra">
+          <div class="pill-title">Ra' (רַע) — Adversidade e Juízo</div>
+          <p>Termo polissêmico que, em oposição direta a <em>shalom</em>, designa calamidade, crise histórica, disciplina ou juízo — e não pecado ou intenção perversa de Deus.</p>
+        </div>
+      </div>
+      <p style="margin-top: 0.95rem;">
+        Além disso, no plano do <strong>mal moral</strong> (o pecado), Deus é a razão de sua definição porque <strong>seu caráter é o parâmetro objetivo do bem</strong>. Sem Deus e sua Lei, o pecado não existiria como padrão absoluto — seria mera opinião humana (cf. Romanos 7:7).
+      </p>
+    </section>
+
+    <div class="controls-bar">
+      <button type="button" class="btn-control" id="expandAllBtn">Expandir Todas as Atribuições</button>
+      <button type="button" class="btn-control" id="collapseAllBtn">Recolher Todas</button>
+    </div>
+
+    <section aria-label="As Cinco Atribuições de Deus">
+      <div class="accordion-list" id="accordionList">
+        <!-- 1. Criador -->
+        <article class="accordion-item active">
+          <button type="button" class="accordion-header" aria-expanded="true">
+            <div class="attr-title-group">
+              <span class="attr-number">I</span>
+              <div>
+                <span class="attr-name">Criador</span>
+                <span class="attr-role">Origem da existência e do cenário da criação</span>
+              </div>
+            </div>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="accordion-body" style="max-height: 600px;">
+            <p>
+              Deus estabelece a existência, a ordem do universo e o próprio espaço onde criaturas livres existem e agem. Ele não cria o mal moral como substância nem como desejo do seu caráter, mas é a fonte de tudo o que existe e a condição de possibilidade da realidade.
+            </p>
+            <div class="scripture-box">
+              <span class="scripture-ref">Gênesis 1:1</span>
+              “No princípio, criou Deus os céus e a terra.”
+            </div>
+            <div class="scripture-box">
+              <span class="scripture-ref">Isaías 45:18</span>
+              “Assim diz o SENHOR, que criou os céus, o único Deus, aquele que formou a terra e a fez; ele a estabeleceu...”
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Sustentador -->
+        <article class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <div class="attr-title-group">
+              <span class="attr-number">II</span>
+              <div>
+                <span class="attr-name">Sustentador</span>
+                <span class="attr-role">Manutenção contínua da realidade e das leis</span>
+              </div>
+            </div>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Deus mantém a criação de pé e preserva o funcionamento contínuo do cosmos — inclusive o ambiente real em que as escolhas humanas produzem consequências concretas, sem que a sustentação da vida se confunda com aprovação do pecado.
+            </p>
+            <div class="scripture-box">
+              <span class="scripture-ref">Colossenses 1:17</span>
+              “Ele é antes de todas as coisas, e nele tudo subsiste.”
+            </div>
+            <div class="scripture-box">
+              <span class="scripture-ref">Hebreus 1:3</span>
+              “...sustentando todas as coisas pela palavra do seu poder...”
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Governador -->
+        <article class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <div class="attr-title-group">
+              <span class="attr-number">III</span>
+              <div>
+                <span class="attr-name">Governador</span>
+                <span class="attr-role">Soberania sobre cenários históricos (shalom e ra')</span>
+              </div>
+            </div>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Deus conduz a história e os cenários das nações, não dividindo o trono com uma divindade rival do mal. Ele permite e ordena tempos de paz (<em>shalom</em>) e tempos de adversidade ou disciplina (<em>ra'</em>), usando até a resistência humana para cumprir seus propósitos.
+            </p>
+            <div class="scripture-box">
+              <span class="scripture-ref">Salmos 103:19</span>
+              “Nos céus, estabeleceu o SENHOR o seu trono, e o seu reino domina sobre tudo.”
+            </div>
+            <div class="scripture-box">
+              <span class="scripture-ref">Isaías 45:7</span>
+              “Eu formo a luz e crio as trevas; faço a paz e crio o mal; eu, o SENHOR, faço todas estas coisas.”
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Legislador -->
+        <article class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <div class="attr-title-group">
+              <span class="attr-number">IV</span>
+              <div>
+                <span class="attr-name">Legislador</span>
+                <span class="attr-role">Autor da lei que define e tipifica o mal moral</span>
+              </div>
+            </div>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Deus é o autor da lei que define o que é o bem e tipifica o que é o mal moral (pecado). Assim como o parlamentar que redige a lei contra o homicídio é o autor da norma — e não o criminoso que a infringe —, Deus estabelece o padrão moral sem ser o agente da transgressão.
+            </p>
+            <div class="scripture-box">
+              <span class="scripture-ref">Isaías 33:22</span>
+              “Porque o SENHOR é o nosso juiz, o SENHOR é o nosso legislador, o SENHOR é o nosso Rei; ele nos salvará.”
+            </div>
+            <div class="scripture-box">
+              <span class="scripture-ref">Tiago 4:12</span>
+              “Há um só Legislador e Juiz, aquele que pode salvar e destruir...”
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Juiz -->
+        <article class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false">
+            <div class="attr-title-group">
+              <span class="attr-number">V</span>
+              <div>
+                <span class="attr-name">Juiz</span>
+                <span class="attr-role">Aplicação da justiça conforme a responsabilidade de cada um</span>
+              </div>
+            </div>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Diante da infração à lei, Deus julga com retidão. Uma mesma sentença justa gera efeitos opostos conforme a posição de cada envolvido: para o infrator punido, a pena é adversidade e perda ("mal"); para a vítima ou o justo, a mesma decisão é reparação e livramento ("bem").
+            </p>
+            <div class="scripture-box">
+              <span class="scripture-ref">Salmos 96:13</span>
+              “...pois ele vem julgar a terra; julgará o mundo com justiça e os povos, com a sua fidelidade.”
+            </div>
+            <div class="scripture-box">
+              <span class="scripture-ref">Gênesis 18:25</span>
+              “...Não faria justiça o Juiz de toda a terra?”
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Analogias Didáticas de Apoio</h2>
+      <p>Selecione um modelo abaixo para visualizar como a presença e o padrão de Deus operam diante da escolha humana:</p>
+
+      <div class="tabs-nav" role="tablist">
+        <button type="button" class="tab-btn active" data-tab="tab-legislador">Legislador &amp; Juiz</button>
+        <button type="button" class="tab-btn" data-tab="tab-atmosfera">Atmosfera &amp; Avião</button>
+        <button type="button" class="tab-btn" data-tab="tab-semaforo">Sinal Vermelho &amp; Gatilho</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-legislador">
+        <h3>O Legislador e a Sentença do Juiz</h3>
+        <p>
+          Quem elabora a lei que proíbe o homicídio define objetivamente o crime, mas não é o agente que puxa o gatilho. Quando ocorre a agressão de A contra B, o juiz aplica a lei: para A (infrator), a sentença é um <strong>mal</strong> (pena/adversidade); para B (vítima), a mesma sentença é um <strong>bem</strong> (justiça/reparação).
+        </p>
+      </div>
+
+      <div class="tab-panel" id="tab-atmosfera">
+        <h3>Condição de Possibilidade, Não Matéria-Prima</h3>
+        <p>
+          Sem a atmosfera, não existiria o voo do avião — contudo, o avião não é feito de ar, nem a atmosfera obriga o piloto a errar a rota. Da mesma forma, Deus é a condição de existência e o parâmetro do bem sem o qual o mal moral sequer poderia ser definido, mas não fabrica a maldade humana.
+        </p>
+      </div>
+
+      <div class="tab-panel" id="tab-semaforo">
+        <h3>O Mesmo Estímulo, Duas Disposições</h3>
+        <p>
+          O sinal vermelho no trânsito é um marco objetivo: para quem o lê como proteção contra colisões, é bênção; para quem o vê como atraso, gera irritação. Assim também a presença e a palavra de Deus atuam como ponto de contato que expõe o coração: fortalecem a fé em <strong>Moisés</strong> (cera ao sol) e endurecem a resistência em <strong>Faraó</strong> (barro ao sol).
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3. Síntese da Tese</h2>
+      <p>
+        Deus não é <em>mau</em> nem pratica o pecado, mas é o <strong>Criador, sustentador, governador, legislador e juiz</strong> de toda a Terra: estabelece o padrão objetivo sem o qual o mal moral seria mera opinião e governa soberanamente tanto a paz (<em>shalom</em>) quanto a adversidade e o juízo (<em>ra'</em>).
+      </p>
+      <div style="margin-top: 1rem;">
+        <button type="button" class="btn-control" id="copySummaryBtn">Copiar Resumo da Tese</button>
+        <span class="copy-feedback" id="copyFeedback">Copiado para a área de transferência!</span>
+      </div>
+      <div class="summary-box" id="thesisText">
+        Em Isaías 45:7, o contraste entre shalom (paz) e ra' (adversidade/juízo) revela a soberania de Deus sobre os cenários da história, sem torná-lo agente do pecado. Como Criador, sustentador, governador, legislador e juiz de toda a Terra, Deus define o padrão objetivo do bem — sem o qual o mal moral seria apenas opinião — e julga com retidão as escolhas livres de cada ser humano.
+      </div>
+    </section>
+
+    <footer>
+      Estudo Exegético e Teológico — Isaías 45:7
+    </footer>
+  </main>
+
+  <script>
+    // Controle dos acordeões
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    function setAccordionState(item, open) {
+      const header = item.querySelector('.accordion-header');
+      const body = item.querySelector('.accordion-body');
+      if (open) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+        body.style.maxHeight = body.scrollHeight + 40 + 'px';
+      } else {
+        item.classList.remove('active');
+        header.setAttribute('aria-expanded', 'false');
+        body.style.maxHeight = null;
+      }
+    }
+
+    accordionItems.forEach((item) => {
+      const header = item.querySelector('.accordion-header');
+      header.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        setAccordionState(item, !isOpen);
+      });
+    });
+
+    document.getElementById('expandAllBtn').addEventListener('click', () => {
+      accordionItems.forEach((item) => setAccordionState(item, true));
+    });
+
+    document.getElementById('collapseAllBtn').addEventListener('click', () => {
+      accordionItems.forEach((item) => setAccordionState(item, false));
+    });
+
+    // Controle das abas de analogias
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        tabButtons.forEach((b) => b.classList.remove('active'));
+        tabPanels.forEach((p) => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+
+    // Copiar síntese
+    document.getElementById('copySummaryBtn').addEventListener('click', () => {
+      const text = document.getElementById('thesisText').innerText.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        const feedback = document.getElementById('copyFeedback');
+        feedback.classList.add('visible');
+        setTimeout(() => feedback.classList.remove('visible'), 2500);
+      });
+    });
+  </script>
+</body>
+</html>
